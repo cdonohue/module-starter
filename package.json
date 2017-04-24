@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "A boilerplate project to demonstrate ways to build consumable modules using the latest technology",
   "main": "dist/module.js",
+  "scripts": {
+    "clean": "rimraf dist && mkdirp dist",
+    "prebuild": "npm run clean",
+    "build": "rollup -c rollup.config.js"
+  },
   "repository": "https://github.com/cdonohue/module-starter.git",
   "author": "Chad Donohue <chad.donohue@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6"
+  }
 }
