@@ -12,6 +12,11 @@ export default {
       format: "umd",
       moduleName: "module",
       sourceMap: true
+    },
+    {
+      dest: pkg.module,
+      format: "es",
+      sourceMap: true
     }
   ]
 }

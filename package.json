@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A boilerplate project to demonstrate ways to build consumable modules using the latest technology",
   "main": "dist/module.js",
+  "module": "dist/module.es.js",
+  "jsnext:main": "dist/module.es.js",
+  "umd:main": "dist/module.js",
   "scripts": {
     "clean": "rimraf dist && mkdirp dist",
     "prebuild": "npm run clean",
