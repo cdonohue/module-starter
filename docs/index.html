@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS Base -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/base.css">
+
+  <!-- CSS Colors -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/colors.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+  <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+  <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+  <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+  <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+  <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+  <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <main role="main">
+    <article id="webslides" class="bg-apple">
+      <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+      <section>
+        <div class="wrap aligncenter">
+          <h1><strong>Use modern JavaScript to write a consumable library</strong></h1>
+        </div>
+        <!-- .end .wrap -->
+        <footer>
+          <div class="wrap">
+            <p>
+              <span class="alignleft">
+                  <a href="#" title="Twitter">
+                    <svg class="fa-twitter" viewBox="0 0 512 512">
+                      <use xlink:href="#fa-twitter"></use>
+                    </svg>
+                    @chaddonohue
+                  </a>
+                </span>
+              <span class="alignright">
+                  <a href="#" title="GitHub">
+                    <svg class="fa-github" viewBox="0 0 512 512">
+                      <use xlink:href="#fa-github"></use>
+                    </svg>
+                    cdonohue
+                  </a>
+                </span>
+            </p>
+          </div>
+        </footer>
+      </section>
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap content-center">
+          <h2>What we'll cover</h2>
+          <ul class="flexblock specs">
+            <!-- li>a? Add blink = <ul class="flexblock steps blink">-->
+            <li>
+              <div>
+                <h2>
+                  Bundling
+                </h2>
+                Write your code in separate files for organization, then bundle it down to one file
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  Transpilation
+                </h2>
+                Allow anyone in your target audience to use your code
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  Minification
+                </h2>
+                Shrink your code down so it travels easier
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  Releasing
+                </h2>
+                Automatically version and check your code when you release
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="grid">
+            <div class="column">
+              <h3>Generate a project</h3>
+              <p class="text-intro">Run <code>yarn init</code> in an empty directory. </p>
+              <p>
+                Feel free to use <code>npm</code> if you wish :)
+              </p>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <img alt="Screenshot" src="static/images/yarn-init.png">
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+      </section>
+      <section>
+        <div class="wrap aligncenter">
+          <h1>
+            <i>Fast-forward to having code to bundle, preferably in <code>src/</code></i>
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            Bundling...
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="grid">
+            <div class="column">
+              <h3>Add <code>rollup</code></h3>
+              <p>
+                <code>yarn add --dev rollup rimraf mkdirp</code>
+              </p>
+              <p>
+                Support for new ES imports/exports. Different from webpack by relying solely on new import standard.
+              </p>
+              <a href="https://rollupjs.org/">https://rollupjs.org/</a>
+              <br>
+              <a href="https://github.com/rollup/rollup/wiki/Plugins">List of plugins</a>
+              <br>
+              <a href="https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c">Webpack and Rollup (the same but different)</a>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <img alt="Screenshot" src="static/images/build-scripts.png">
+              <br>
+              <img alt="Screenshot" src="static/images/rollup-config.png">
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            Transpiling...
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="grid">
+            <div class="column">
+              <h3>Add <code>bublé</code></h3>
+              <p>
+                <code>yarn add --dev buble rollup-plugin-buble</code>
+              </p>
+              <p>
+                Bublé is an ES2015+ compiler with zero configuration. It tends to transpile to ES5 that you or I would write.
+              </p>
+              <a href="https://buble.surge.sh">https://buble.surge.sh</a>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <img alt="Screenshot" src="static/images/add-buble.png">
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            Code example
+          </h1>
+          <img alt="Screenshot" src="static/images/before-transpile.png">
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            After Babel
+          </h1>
+          <img alt="Screenshot" src="static/images/after-babel.png">
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            After Bublé
+          </h1>
+          <img alt="Screenshot" src="static/images/after-buble.png">
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <img alt="Screenshot" src="static/images/mic-drop.gif">
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            Minifying...
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="grid">
+            <div class="column">
+              <h3>Add <code>uglify-js</code></h3>
+              <p>
+                <code>yarn add --dev uglify-js gzip-size-cli strip-json-comments-cli</code>
+              </p>
+              <p>
+                Uglify compresses your code so you can ship less.
+              </p>
+              <a href="http://lisperator.net/uglifyjs/">http://lisperator.net/uglifyjs/</a>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <img alt="Screenshot" src="static/images/add-minification.png">
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            Publishing...
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="grid">
+            <div class="column">
+              <h3>Add <code>np</code></h3>
+              <p>
+                <code>yarn add --dev np</code>
+              </p>
+              <p>
+                Steps you through the publish process and versions your code
+              </p>
+              <a href="https://github.com/sindresorhus/np">https://github.com/sindresorhus/np</a>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <img alt="Screenshot" src="static/images/add-np.png">
+              <br>
+              <img alt="Screenshot" src="static/images/running-np.png">
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            One more thing...
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="grid">
+            <div class="column">
+              <h3>Multiple exports</h3>
+              <p>
+                Just add some extra properties in your package.json file and a few lines in your build file. Now, anyone can consume your
+                library.
+              </p>
+              <img alt="Screenshot" src="static/images/add-extra-modules.png">
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <img alt="Screenshot" src="static/images/add-multiple-builds.png">
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+      </section>
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap content-center">
+          <h2>Now, you have</h2>
+          <ul class="flexblock specs">
+            <!-- li>a? Add blink = <ul class="flexblock steps blink">-->
+            <li>
+              <div>
+                Bundling with rollup
+              </div>
+            </li>
+            <li>
+              <div>
+                Transpilation with buble
+              </div>
+            </li>
+            <li>
+              <div>
+                Minification and gzip size information
+              </div>
+            </li>
+            <li>
+              <div>
+                Support for bundlers that support modern modules
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            Storytime
+          </h1>
+          <br>
+          <a href="https://github.com/cdonohue/polychrome">https://github.com/cdonohue/polychrome</a>
+        </div>
+      </section>
+      <section>
+        <div class="wrap slide-top content-center">
+          <h2>
+            Lessons learned
+          </h2>
+          <ul class="flexblock specs">
+            <li>
+              <div>
+                Use an .npmignore file (you don't want unbundled src files getting published)
+              </div>
+            </li>
+            <li>
+              <div>
+                Have a prepublish script defined (it will run each time you release) <code>npm run build -s</code>
+              </div>
+            </li>
+            <li>
+              <div>
+                Don't use yarn inside your package.json scripts. Use npm.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            Start your own
+          </h1>
+          <br>
+          <a href="https://github.com/cdonohue/module-starter">https://github.com/cdonohue/module-starter</a>
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>
+            Questions?
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div class="wrap content-center">
+          <h1>Thank you!</h1>
+        </div>
+        <footer>
+          <div class="wrap">
+            <p>
+              <span class="alignleft">
+                  <a href="#" title="Twitter">
+                    <svg class="fa-twitter" viewBox="0 0 512 512">
+                      <use xlink:href="#fa-twitter"></use>
+                    </svg>
+                    @chaddonohue
+                  </a>
+                </span>
+              <span class="alignright">
+                  <a href="#" title="GitHub">
+                    <svg class="fa-github" viewBox="0 0 512 512">
+                      <use xlink:href="#fa-github"></use>
+                    </svg>
+                    cdonohue
+                  </a>
+                </span>
+            </p>
+          </div>
+        </footer>
+      </section>
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
+
+  <!-- A global footer
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+      </div>
+    </footer>  -->
+
+  <!-- Required -->
+  <script src="static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="static/js/svg-icons.js"></script>
+
+</body>
+
+</html>
